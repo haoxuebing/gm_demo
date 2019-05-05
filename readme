@@ -1,0 +1,13 @@
+mkdir temp 
+
+npm install
+
+安装 graphicsmagick
+    wget ftp://ftp.graphicsmagick.org/pub/GraphicsMagick/1.3/GraphicsMagick-1.3.25.tar.gz    
+    or
+    https://jaist.dl.sourceforge.net/project/graphicsmagick/graphicsmagick/1.3.31/GraphicsMagick-1.3.31.tar.gz
+
+端口 3000
+
+
+
