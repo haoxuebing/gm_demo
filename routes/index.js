@@ -141,8 +141,8 @@ router.post('/robot', async function (req, res) {
       }, 60000, 60000, height_limit, result_map, system_warn, request_url, scroll_times);
 
       // 等待随机时间
-      // let randomMillSecond = randomNum(600, 2000);
-      // await sleep(randomMillSecond);
+      let randomMillSecond = randomNum(600, 1000);
+      await sleep(randomMillSecond);
       scroll_times++;
       console.log(request_url + ' 需要滚动 : ' + mValues.times + '次 , 滚动第[' + scroll_times + ']次');
       if (scroll_times > mValues.times) {
