@@ -1,10 +1,20 @@
-<!--<html>-->
-<center>
-    <div class="w bread">
-        <div id="choosebox" class="ellipsis">点击选择图片</div>
-        <form class="form-horizontal" id="image_form" action="/imgUpload" method="post" enctype="multipart/form-data">
-            <input class="hide" type="file" id="file" name="img" />
-            <button class="btn" id="upload">上传图片</button>
-        </form>
-    </div>
-</center>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= title%></title>
+</head>
+<body>
+    <center>
+        <div class="w bread">
+            <div id="choosebox" class="ellipsis">点击选择图片</div>
+            <form class="form-horizontal" id="image_form" action="/imgUpload" method="post" enctype="multipart/form-data">
+                <input class="hide" type="file" id="file" name="img" />
+                <button class="btn" id="upload">上传图片</button>
+            </form>
+        </div>
+    </center>
+</body>
+</html>
