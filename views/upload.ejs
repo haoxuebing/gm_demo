@@ -1,20 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= title%></title>
+    <style>
+        body {
+            text-align: center
+        }
+
+        .divcss5 {
+            margin: 5% auto 0 auto;
+        }
+    </style>
 </head>
+
 <body>
-    <center>
-        <div class="w bread">
-            <div id="choosebox" class="ellipsis">点击选择图片</div>
-            <form class="form-horizontal" id="image_form" action="/imgUpload" method="post" enctype="multipart/form-data">
-                <input class="hide" type="file" id="file" name="img" />
-                <button class="btn" id="upload">上传图片</button>
-            </form>
-        </div>
-    </center>
+    <div class="divcss5">
+        <div id="choosebox" class="ellipsis">点击选择图片</div>
+        <br>
+        <form class="form-horizontal" id="image_form" action="/imgUpload" method="post" enctype="multipart/form-data">
+            <input class="hide" type="file" id="file" name="img" />
+            <button class="btn" id="upload">上传图片</button>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <a href="/robot">获取网页快照</a>
+    </div>
 </body>
+
 </html>
