@@ -58,7 +58,7 @@ router.get('/robot', function (req, res) {
 
 
 router.post('/robot', async function (req, res) {
-  let request_url = req.body.url
+  let request_url = req.body.url.indexOf('http') > -1 ? req.body.url : ('http://' + req.body.url)
   console.log('正在截取网页：' + request_url)
   let localpath = 'temp/' + cuid() + '.png'
   let timeoutMillSeconds = 10000;
@@ -86,7 +86,6 @@ router.post('/robot', async function (req, res) {
     timeout: timeoutMillSeconds,
     waitUntil: waitUntilStr
   }).catch(err => console.log(err));
-  // await page.waitFor(1000);
 
   let height_limit = false;
   let scroll_times = 0;
@@ -185,12 +184,12 @@ function sleep(delay) {
 // 随机数
 function randomNum(minNum, maxNum) {
   switch (arguments.length) {
-      case 1:
-          return parseInt(Math.random() * minNum + 1, 10);
-      case 2:
-          return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
-      default:
-          return 0;
+    case 1:
+      return parseInt(Math.random() * minNum + 1, 10);
+    case 2:
+      return parseInt(Math.random() * (maxNum - minNum + 1) + minNum, 10);
+    default:
+      return 0;
   }
 }
 
