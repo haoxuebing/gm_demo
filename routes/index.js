@@ -77,10 +77,6 @@ router.post('/robot', async function (req, res) {
   });
 
   let page = await browser.newPage();
-  // page.setViewport({
-  //   width: 1920,
-  //   height: 2048
-  // });
 
   await page.goto(request_url, {
     timeout: timeoutMillSeconds,
