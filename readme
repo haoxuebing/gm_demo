@@ -8,6 +8,14 @@ npm install
     make
     make install
 
+    #注意在 ./configure 查看需不需要安装libpng、libjpeg
+    https://blog.csdn.net/rongge2008/article/details/49641631
+    另外安装上这两个lib可能不会起效，需要配置环境变量，
+        vi /etc/profile
+        export LD_LIBRARY_PATH=/usr/local/lib
+        source /etc/profile
+
+
 端口 3000
 
 本项目强制压缩成了 150*150 
@@ -30,3 +38,4 @@ ttmkfdir -e /usr/share/X11/fonts/encodings/encodings.dir
 vi /etc/fonts/fonts.conf
 fc-cache
 fc-list :lang=zh
+
