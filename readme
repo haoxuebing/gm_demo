@@ -17,3 +17,16 @@ chrome报错：
 
     yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
 
+截图字体乱码：
+yum -y install fontconfig
+cd /usr/share/fonts/
+mkdir chinese
+rz -be 
+    上传 stsong.ttf simfang.ttf simhei.ttf stxihei.ttf stxingka.ttf
+yum install ipa-gothic-fonts xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-utils xorg-x11-fonts-cyrillic xorg-x11-fonts-Type1 xorg-x11-fonts-misc -y
+chmod -R 775 /usr/share/fonts/chinese
+yum -y install ttmkfdir
+ttmkfdir -e /usr/share/X11/fonts/encodings/encodings.dir
+vi /etc/fonts/fonts.conf
+fc-cache
+fc-list :lang=zh
